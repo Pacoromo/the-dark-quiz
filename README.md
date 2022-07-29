@@ -28,7 +28,7 @@ The functionality is as follows:
 
 - A special alarm sound is played when the time left is only 10 seconds.
 
-- When the coundtdown is over, the screen shows a numeric result, a sound and a paragraph according to the number of correct answers.
+- When the countdown is over, the screen shows a numeric result, a sound and a paragraph according to the number of correct answers.
 
 
 May the Force be with you!...............(and me)
