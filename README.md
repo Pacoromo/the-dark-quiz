@@ -30,3 +30,6 @@ The functionality is as follows:
 
 
 May the Force be with you!...............(and me)
+
+
+Sound clips by findsounds.com, clipchamp.com and soundboard.com
