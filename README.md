@@ -1,9 +1,10 @@
 # Juno-College-JavaScript-Course-Project1
 
 --------STAR WARS QUIZ GAME----------
+-----------The Dark Quiz-------------
 
 
-This is the first attempt to do a JavaScript application using some sound files and some of the new concepts learned during class.
+This is the first attempt to do a JavaScript application using the new concepts learned during class and some sound files.
 
 The idea is to:
 - Manipulate the DOM with some event listeners.
@@ -20,7 +21,7 @@ The functionality is as follows:
 
 - There is a time limit of 1 minute
 
-- Sound alerts should be presented according to the option selected for every question
+- Sound alerts should be played according to the option selected for every question
 
 - If 2 answers in a row are wrong, there's a special audio alert by Yoda.
 
