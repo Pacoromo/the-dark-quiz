@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>The Dark Quiz</title>
+    <!-- July 31 2022 -->
+  </head>
+
+  <body>
+    <header class="intro-modal active-screen">
+      <!--Intro Screen-->
+      <div class="container">
+        <h1>So You Think You Are A Jedi</h1>
+
+        <p>See, we will...</p>
+
+        <button class="start-btn">Start</button>
+        <audio class="intro-sound" src="./assets/audio/intro.mp3"></audio>
+        <footer class="created-at">
+          Created at <a href="https://junocollege.com/">Juno College </a>by
+          Francisco J. Romo
+        </footer>
+      </div>
+    </header>
+
+    <main>
+      <div class="quiz-container">
+        <div class="preview-container disable-preview">
+          <!--preview and intructions-->
+          <h2>How much do you know about the galaxy far, far away?</h2>
+
+          <p>Try to answer as many questions as possible in two minutes.</p>
+          <p>Avoid 2 wrong answers in a row!</p>
+          <p>Take Control or you'll loose time</p>
+          <p>May the force be with you...</p>
+
+          <button class="go-btn">Go</button>
+          <audio class="start-sound" src="./assets/audio/start.mp3"></audio>
+          <audio
+            class="background-sound"
+            src="./assets/audio/background.wav"
+            loop
+          ></audio>
+        </div>
+        <div class="question-container disable">
+          <!--Question, Options and Counter container-->
+          <div class="question-header">
+            <h3>
+              Question
+              <span class="question-number"></span>
+              of <span class="questions-quantity"></span>
+            </h3>
+            <p class="time-left">Time left: <span class="counter"></span></p>
+          </div>
+
+          <p class="question">Actual question</p>
+
+          <ul class="options">
+            <li class="option" id="option1">option 1</li>
+            <li class="option" id="option2">option 2</li>
+            <li class="option" id="option3">option 3</li>
+            <li class="option" id="option4">option 4</li>
+          </ul>
+          <audio
+            class="correct-answer"
+            src="./assets/audio/correct.mp3"
+          ></audio>
+          <audio class="wrong-answer" src="./assets/audio/wrong.wav"></audio>
+          <audio
+            class="control-yourself"
+            src="./assets/audio/two-wrongs-in-a-row.mp3"
+          ></audio>
+
+          <audio class="next" src="./assets/audio/next.mp3"></audio>
+        </div>
+        <div class="score-container disable">
+          <!--Final Screen/Score-->
+          <p class="result-message1"></p>
+          <!--Code inserted text-->
+
+          <h3 class="result-heading">
+            <span class="correct-answers"></span> correct
+            <span class="word-answer"></span>out of
+            <span class="total-questions"></span>
+          </h3>
+
+          <p class="result-message2"></p>
+          <!--Code inserted text-->
+
+          <audio class="below10" src="./assets/audio/below10.mp3"></audio
+          ><!--Audio according to results-->
+          <audio class="below30" src="./assets/audio/below30.mp3"></audio>
+          <audio class="below50" src="./assets/audio/below50.mp3"></audio>
+          <audio class="below80" src="./assets/audio/below80.mp3"></audio>
+          <audio class="below100" src="./assets/audio/below100.mp3"></audio>
+          <audio
+            class="perfect-score"
+            src="./assets/audio/perfectScore.mp3"
+          ></audio>
+          <audio class="alarm" src="./assets/audio/alarm.mp3"></audio>
+
+          <button class="restart">Restart</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

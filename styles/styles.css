@@ -1,0 +1,275 @@
+/*********Custom Properties*******/
+
+:root {
+  --yellow: #ebd71c; /* general font and borders color for this theme*/
+}
+
+/**  Generals   */
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ea593e;
+}
+
+a:active {
+  color: #6a2a1e;
+}
+
+/*************************/
+/**********fonts**********/
+/*************************/
+
+@font-face {
+  font-family: "star-wars";
+  src: url(../assets/fonts/SoloistStraight-Jqgx.otf);
+}
+
+/*********button colors and emojis*********/
+
+.wrong-answer-color,
+.fa-galactic-republic {
+  color: red;
+}
+
+.right-answer-color,
+.fa-jedi-order {
+  color: greenyellow;
+}
+
+/**************base styles***************/
+
+h1 {
+  font-size: clamp(2rem, 4.5vw, 5rem); /* Experimenting with this new thing*/
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+}
+
+p,
+button,
+.options {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/**********************************/
+/************Layout****************/
+/**********************************/
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/images/background.jpg) center/395%;
+  color: var(--yellow);
+  font-family: star-wars, sans-serif;
+  user-select: none;
+  animation: animatedBackground 60s linear infinite;
+}
+
+button {
+  color: var(--yellow);
+  font-family: inherit;
+  background-color: transparent;
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+}
+
+.intro-modal .container,
+.preview-container,
+.question-container,
+.score-container {
+  width: clamp(350px, 90%, 940px);
+  border: 4px solid var(--yellow);
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*center container*/
+  text-align: center;
+}
+
+/************ Intro ***************/
+
+.intro-modal {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/images/start-bg.jpg) center;
+  opacity: 0;
+  transition: opacity 2.5s ease-in;
+  pointer-events: none;
+  animation: zoomBackground 2.5s cubic-bezier(0.75, 0.26, 0.98, 0.79); /*short light speed effect  cubic-beizer.com*/
+}
+
+.intro-modal.active-screen {
+  opacity: 1;
+  pointer-events: initial;
+  animation: animatedBackground 40s linear infinite;
+}
+
+.start-btn {
+  margin-bottom: 1em;
+}
+
+.created-at {
+  border-top: 1px solid;
+  padding-top: 1em;
+  font-size: 1.6rem;
+}
+
+/************ main ***************/
+
+.intro-modal .container {
+  padding: 2em;
+}
+
+.preview-container,
+.question-container,
+.score-container {
+  padding: 2em 0.5em;
+  opacity: 1;
+  pointer-events: initial;
+  transition: opacity 0.5s;
+}
+
+.preview-container {
+  padding-right: 1em;
+  padding-left: 1em;
+  transition-delay: 2.5s; /*same as zoom bacground timed animation*/
+}
+
+.preview-container p:nth-child(3) {
+  text-decoration: underline;
+}
+
+.go-btn {
+  color: greenyellow;
+  border-color: greenyellow;
+}
+
+.question-container {
+  padding-top: 0;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--yellow);
+  padding: 0 0.5em;
+}
+
+.question,
+.options {
+  padding-top: 1em;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -4px; /* to line up the options*/
+  margin-right: -4px;
+}
+
+.option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.5em;
+  margin: 4px;
+  width: calc(50% - 8px);
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+}
+
+.option:hover {
+  cursor: pointer;
+}
+
+.red-alarm {
+  color: red;
+}
+
+/*********Containers behaviour*********/
+
+.disable {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.disable-preview {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s; /* removes delay to dissapear for preview screen*/
+}
+
+.disableClick {
+  pointer-events: none;
+}
+
+/***********************************/
+/**********Animations***************/
+/***********************************/
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  25% {
+    background-position: 100% 100%;
+  }
+
+  50% {
+    background-position: 0% 100%;
+  }
+
+  75% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes zoomBackground {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 10000%;
+  }
+}
