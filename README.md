@@ -26,7 +26,7 @@ The functionality is as follows:
 
 - If 2 answers in a row are wrong, there's a special audio alert by Yoda.
 
-- A special alarm sound is played when the time left is only 10 seconds or less.
+- A special alarm sound is played when the time left is only 20 seconds or less.
 
 - When the countdown is over, the screen shows a numeric result, a sound and a paragraph according to the number of correct answers.
 
