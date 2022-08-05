@@ -2,7 +2,7 @@
 
 ## --------STAR WARS QUIZ GAME----------
 
-### ------------The Dark Quiz---------------
+### ----------------The Dark Quiz------------------
 
 
 This is the first attempt to do a JavaScript application using the new concepts learned during class and some sound files.
