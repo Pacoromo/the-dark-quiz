@@ -3,7 +3,7 @@
 ## ----------------The Dark Quiz------------------
 
 
-###Make use of JavaScript and JQuery to:
+### Make use of JavaScript and JQuery to:
 
 - Manipulate the DOM with some event listeners.
 - Update some of the CSS rendering by implementing the use of addClass() and removeClass() methods.
@@ -11,7 +11,7 @@
 - Use arrays and objects to store the quiz information.
 
 
-###The functionality is as follows:
+### The functionality is as follows:
 
 - The app is a quiz game where the user is asked questions about the Star Wars universe.
 
