@@ -1,20 +1,17 @@
-# Juno-College-JavaScript-Course-Project1
+# --------STAR WARS QUIZ GAME----------
 
-## --------STAR WARS QUIZ GAME----------
-
-### ----------------The Dark Quiz------------------
+## ----------------The Dark Quiz------------------
 
 
-This is the first attempt to do a JavaScript application using the new concepts learned during class and some sound files.
+###Make use of JavaScript and JQuery to:
 
-The idea is to:
 - Manipulate the DOM with some event listeners.
 - Update some of the CSS rendering by implementing the use of addClass() and removeClass() methods.
 - Make use of some conditionals and variables.
 - Use arrays and objects to store the quiz information.
 
 
-The functionality is as follows:
+###The functionality is as follows:
 
 - The app is a quiz game where the user is asked questions about the Star Wars universe.
 
